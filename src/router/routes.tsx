@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import { RoutesEnum } from '../constants/routes';
-import Home from '../views/home';
+import Home from '../views/Landing';
 import OtherPage from '../views/other-page';
 
 export const RouteComponent: Record<RoutesEnum, FC> = {

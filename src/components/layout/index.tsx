@@ -9,7 +9,7 @@ const Layout: FC<LayoutProps> = ({ pageTitle = '', children }) => (
   <View>
     <Helmet>
       <html lang="pt-PT" />
-      <title>Template | {pageTitle}</title>
+      <title>Travel App | {pageTitle}</title>
     </Helmet>
     <header />
     <main>{children}</main>
