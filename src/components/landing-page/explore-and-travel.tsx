@@ -23,7 +23,7 @@ const ExploreTravel: FC = () => {
           Explore and <br></br> Travel
         </Text>
         <Text>Holiday finder</Text>
-        <FlexView justifyContent="space-between">
+        <FlexView justifyContent="space-between" marginTop="10px">
           <Select name="travel">
             {['escola', 'Pambala', 'Assalto'].map((item) => {
               return (
@@ -43,7 +43,7 @@ const ExploreTravel: FC = () => {
             })}
           </Select>
         </FlexView>
-        <FlexView justifyContent="space-between">
+        <FlexView justifyContent="space-between" marginTop="10px">
           <Select name="travel">
             {['escola', 'Pambala', 'Assalto'].map((item) => {
               return (
@@ -63,7 +63,7 @@ const ExploreTravel: FC = () => {
             })}
           </Select>
         </FlexView>
-        <Button variant="secundary">
+        <Button variant="secundary" mt="10px">
           <Text>Explore</Text>
         </Button>
       </FlexView>
