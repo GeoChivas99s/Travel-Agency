@@ -7,6 +7,8 @@ const colors = {
   warning: primitiveColors.YELLOW_100,
   success: primitiveColors.GREEN_100,
   error: primitiveColors.RED_100,
+  normal: primitiveColors.ORANGE_100,
+  normal_white: primitiveColors.WHITE_100,
 };
 
 export default colors;

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 
-import { List, Text } from '../../elements';
+import { Button, List, Text } from '../../elements';
 import NavBarItem from './nav-bar-item';
 
 const NavBarItems: FC = (props) => {
@@ -32,6 +32,16 @@ const NavBarItems: FC = (props) => {
         <Link to="/">
           <Text> Parceiros </Text>
         </Link>
+      </NavBarItem>
+      <NavBarItem>
+        <Button variant="primary">
+          <Text>Login</Text>
+        </Button>
+      </NavBarItem>
+      <NavBarItem>
+        <Button variant="secundary">
+          <Text>Registar-se</Text>
+        </Button>
       </NavBarItem>
     </List>
   );
