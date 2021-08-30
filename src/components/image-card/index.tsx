@@ -6,7 +6,7 @@ import ImageCardProps from './image-card.types';
 
 const ImageCard: FC<ImageCardProps> = ({ title, country, image }) => {
   return (
-    <FlexView m="10px" flexDirection="column" borderRadius="5px">
+    <FlexView m="10px" flexDirection="column" borderRadius="5px" zIndex={-1}>
       <Image src={image} width="100%" height="100%" borderRadius="5px" />
 
       <View height="50px" position="relative">

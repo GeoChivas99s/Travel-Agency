@@ -9,6 +9,7 @@ const primitiveColors = {
   GREEN_100: '#44FF44',
   PRIMARY_100: '#FF8877',
   WHITE_100: '#FFFFFF',
+  ORANGE_200: '#FEC38A',
 };
 
 export default primitiveColors;

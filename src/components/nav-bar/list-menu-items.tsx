@@ -14,12 +14,14 @@ const ListMenuItems: FC<ListMenuItemsProps> = () => {
       left="0"
       mt="XXL"
       width="100vw"
-      background="cyan"
+      background="#FAC38A"
       position="absolute"
       flexDirection="column"
-      height="100%"
+      height="100vh"
       display="flex"
       overflowY="hidden"
+      zIndex={10}
+      style={{ transition: '2s' }}
     >
       <List
         display="flex"

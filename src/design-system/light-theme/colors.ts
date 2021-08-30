@@ -9,6 +9,7 @@ const colors = {
   error: primitiveColors.RED_100,
   normal: primitiveColors.ORANGE_100,
   normal_white: primitiveColors.WHITE_100,
+  setNormal: primitiveColors.ORANGE_200,
 };
 
 export default colors;

@@ -29,19 +29,17 @@ const data = [
 ];
 const FeaturedDestinations: FC = () => {
   return (
-    <FlexView flexDirection="column" alignItems="center" mt="20px" width="100%">
+    <FlexView alignItems="center" mt="20px" width="100%" flexDirection="column">
       <FlexView justifyContent="space-between" width="85%" mb="20px">
         <Text fontSize="XXL">Featured destinations</Text>
         <Text color="normal" style={{ cursor: 'pointer' }}>
-          View all <Icon.FaArrowRight />{' '}
+          View all »»
         </Text>
       </FlexView>
       <FlexView
         justifyContent="space-between"
-        height="50vh"
-        width="90%"
-        p="5px"
         flexDirection={['column', 'column', 'row']}
+        width="90%"
       >
         {data.map((item) => {
           return (

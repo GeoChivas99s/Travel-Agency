@@ -2,6 +2,8 @@ import React, { FC } from 'react';
 
 import {
   FeaturedDestinations,
+  Footer,
+  Guides,
   Layout,
   LearnMore,
   Logo,
@@ -15,6 +17,8 @@ const Home: FC = () => (
     <TravelExplore />
     <LearnMore />
     <FeaturedDestinations />
+    <Guides />
+    <Footer />
   </Layout>
 );
 

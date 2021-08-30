@@ -10,6 +10,7 @@ const ExploreTravel: FC = () => {
       flexDirection={['column', 'column', 'row']}
       alignItems="center"
       overflowY={['hidden', 'unset', 'unset']}
+      pt="90px"
     >
       <FlexView
         flexDirection="column"

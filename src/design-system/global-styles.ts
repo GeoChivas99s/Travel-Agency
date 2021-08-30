@@ -15,6 +15,7 @@ const GlobalStyles = css`
 
   a {
     text-decoration: none;
+    color: black;
   }
 `;
 
