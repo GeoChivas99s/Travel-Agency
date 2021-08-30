@@ -1,35 +1,40 @@
-
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 
 import { List, Text } from '../../elements';
 import NavBarItem from './nav-bar-item';
 
-const ListMenuItems: FC = () => {
-
-
+const NavBarItems: FC = (props) => {
   return (
     <List
       px="1rem"
-      display="flex"
+      marginRight="60px"
       alignItems="center"
       overflowY={['hidden', 'unset', 'unset']}
-      flexDirection={['column', 'column', 'unset']}
+      display={['none', 'none', 'flex']}
     >
       <NavBarItem>
-uuwu
+        <Link to="/">
+          <Text> Home </Text>
+        </Link>
       </NavBarItem>
       <NavBarItem>
-uuwu
+        <Link to="/">
+          <Text> Destinos </Text>
+        </Link>
       </NavBarItem>
       <NavBarItem>
-uuwu
+        <Link to="/">
+          <Text> Sobre Nós </Text>
+        </Link>
       </NavBarItem>
       <NavBarItem>
-uuwu
+        <Link to="/">
+          <Text> Parceiros </Text>
+        </Link>
       </NavBarItem>
     </List>
   );
 };
 
-export default ListMenuItems;
+export default NavBarItems;

@@ -6,7 +6,7 @@ const NavBarItem: FC = (props) => (
   <ListItem
     px="L"
     cursor="pointer"
-    fontSize="1.1rem"
+    fontSize="1rem"
     py={['M', 'L']}
     {...props}
   />
