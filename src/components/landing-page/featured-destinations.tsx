@@ -1,8 +1,6 @@
 import React, { FC } from 'react';
-import * as Icon from 'react-icons/fa';
 import { v4 } from 'uuid';
 
-import colors from '../../design-system/light-theme/colors';
 import { FlexView, Text } from '../../elements';
 import ImageCard from '../image-card';
 const data = [

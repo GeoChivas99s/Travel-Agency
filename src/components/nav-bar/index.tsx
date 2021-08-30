@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { FlexView, Image, View } from '../../elements';
+import { FlexView, Image } from '../../elements';
 import { useEventListener } from '../../hooks';
 import MobileMenu from './mobile-menu';
 import NavBarItems from './nav-bar-items';

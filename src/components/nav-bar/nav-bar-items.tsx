@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Button, List, Text } from '../../elements';
 import NavBarItem from './nav-bar-item';
 
-const NavBarItems: FC = (props) => {
+const NavBarItems: FC = () => {
   return (
     <List
       px="1rem"

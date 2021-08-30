@@ -1,10 +1,8 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 
-import { Routes, RoutesEnum } from '../../constants/routes';
 import { FlexView, List } from '../../elements';
 import ListMenuItemsProps from './nav-bar.types';
-import NavBarItem from './nav-bar-items';
 
 // eslint-disable-next-line react/prop-types
 const ListMenuItems: FC<ListMenuItemsProps> = () => {
