@@ -6,7 +6,6 @@ import {
   Guides,
   Layout,
   LearnMore,
-  Logo,
   NavBar,
   TravelExplore,
 } from '../components';

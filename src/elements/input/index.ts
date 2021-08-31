@@ -18,7 +18,16 @@ const Input = styled.input(
     padding: '10px',
     borderRadius: '5px',
   },
-  compose(color, space, border, shadow, display, layout, typography)
+  compose(
+    color,
+    space,
+    border,
+    shadow,
+    display,
+    layout,
+    typography,
+    borderRadius
+  )
 );
 
 export default Input;

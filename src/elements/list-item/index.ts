@@ -7,7 +7,6 @@ import {
   layout,
   position,
   space,
-  system,
   typography,
 } from 'styled-system';
 
@@ -17,15 +16,7 @@ const ListItem = styled.li<ListItemProps>(
   {
     display: 'flex',
   },
-  compose(
-    space,
-    border,
-    flexbox,
-    color,
-    layout,
-    position,
-    typography
-  )
+  compose(space, border, flexbox, color, layout, position, typography)
 );
 
 export default ListItem;

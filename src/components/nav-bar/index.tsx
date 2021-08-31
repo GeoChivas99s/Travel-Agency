@@ -1,4 +1,3 @@
-import { useTheme } from '@emotion/react';
 import React, { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -7,7 +6,6 @@ import { useEventListener } from '../../hooks';
 import MobileMenu from './mobile-menu';
 import NavBarItems from './nav-bar-items';
 const NavBar: FC = () => {
-  const theme = useTheme();
   const [colorChange, setcolorChange] = useState<string | null>('');
   const [textChange, setTextChange] = useState<boolean>(false);
   return (
