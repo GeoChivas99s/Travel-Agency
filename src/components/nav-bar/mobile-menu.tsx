@@ -6,7 +6,7 @@ import { FlexView, Text } from '../../elements';
 import ListMenuItems from './list-menu-items';
 
 const MobileMenu: FC = () => {
-  const [isOpen, setIsopen] = useState(false);
+  const [isOpen, setIsopen] = useState<boolean>(false);
   const toogleIsopen = () => {
     setIsopen(!isOpen);
   };
@@ -22,7 +22,6 @@ const MobileMenu: FC = () => {
         flexDirection="column"
       >
         <Text fontSize="XL">
-          {' '}
           {isOpen ? <Icons.AiOutlineClose /> : <Icon.FaBars />}
         </Text>
       </FlexView>

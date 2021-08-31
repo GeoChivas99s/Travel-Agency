@@ -10,6 +10,8 @@ const primitiveColors = {
   PRIMARY_100: '#FF8877',
   WHITE_100: '#FFFFFF',
   ORANGE_200: '#FEC38A',
+  GRAY_100: '#F9F9FB',
+  GRAY_200: '#848484',
 };
 
 export default primitiveColors;

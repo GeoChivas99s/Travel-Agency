@@ -1,10 +1,13 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 
+import { Routes, RoutesEnum } from '../../constants/routes';
 import { Button, List, Text } from '../../elements';
+import NavbarItemsProps from './nav-bar.types';
 import NavBarItem from './nav-bar-item';
 
-const NavBarItems: FC = () => {
+// eslint-disable-next-line react/prop-types
+const NavBarItems: FC<NavbarItemsProps> = ({ isScroll }) => {
   return (
     <List
       px="1rem"
@@ -15,32 +18,36 @@ const NavBarItems: FC = () => {
     >
       <NavBarItem>
         <Link to="/">
-          <Text> Home </Text>
+          <Text color={isScroll ? 'foreground' : ''}> Home </Text>
         </Link>
       </NavBarItem>
       <NavBarItem>
         <Link to="/">
-          <Text> Destinos </Text>
+          <Text color={isScroll ? 'foreground' : ''}> Destinos </Text>
+        </Link>
+      </NavBarItem>
+      <NavBarItem>
+        <Link to={Routes[RoutesEnum.AboutUS]}>
+          <Text color={isScroll ? 'foreground' : ''}> Sobre Nós </Text>
         </Link>
       </NavBarItem>
       <NavBarItem>
         <Link to="/">
-          <Text> Sobre Nós </Text>
-        </Link>
-      </NavBarItem>
-      <NavBarItem>
-        <Link to="/">
-          <Text> Parceiros </Text>
+          <Text color={isScroll ? 'foreground' : ''}> Parceiros </Text>
         </Link>
       </NavBarItem>
       <NavBarItem>
         <Button variant="primary">
-          <Text>Login</Text>
+          <Link to={Routes[RoutesEnum.Login]}>
+            <Text color="normal">Login</Text>
+          </Link>
         </Button>
       </NavBarItem>
       <NavBarItem>
         <Button variant="secundary">
-          <Text>Registar-se</Text>
+          <Link to={Routes[RoutesEnum.SignUp]}>
+            <Text color="foreground">Registar-se</Text>
+          </Link>
         </Button>
       </NavBarItem>
     </List>

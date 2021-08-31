@@ -1,10 +1,14 @@
 import { FC } from 'react';
 
 import { RoutesEnum } from '../constants/routes';
+import AboutUS from '../views/AboutUs';
 import Home from '../views/Landing';
-import OtherPage from '../views/other-page';
+import Login from '../views/Login';
+import SignUpView from '../views/SignUp';
 
 export const RouteComponent: Record<RoutesEnum, FC> = {
   [RoutesEnum.Home]: Home,
-  [RoutesEnum.OtherPage]: OtherPage,
+  [RoutesEnum.Login]: Login,
+  [RoutesEnum.AboutUS]: AboutUS,
+  [RoutesEnum.SignUp]: SignUpView,
 };

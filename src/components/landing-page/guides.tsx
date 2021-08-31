@@ -1,5 +1,6 @@
+import './style.css';
+
 import React, { FC } from 'react';
-import * as Icon from 'react-icons';
 
 import { Button, FlexView, Image, Text, View } from '../../elements';
 
@@ -18,6 +19,7 @@ const LearnMore: FC = () => {
         p="0px 30px 30px 30px "
         width={['100%', '100%', '30%']}
         height="40vh"
+        mb="60px"
       >
         <Text fontSize="XXL">Guides by Thousand Sunny</Text>
         <Text>
@@ -36,7 +38,7 @@ const LearnMore: FC = () => {
           <Text>Download »» </Text>
         </Button>
       </FlexView>
-      <View width={['350px', '300px', '490px']}>
+      <View width={['320px', '300px', '490px']} className="bounce" zIndex={-1}>
         <Image src={`${process.env.PUBLIC_URL}ballon.png`} width="100%" />
       </View>
     </FlexView>

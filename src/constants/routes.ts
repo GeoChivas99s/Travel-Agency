@@ -4,7 +4,9 @@
  */
 export enum RoutesEnum {
   Home = 'home',
-  OtherPage = 'otherPage',
+  Login = 'login',
+  AboutUS = 'about',
+  SignUp = 'signup',
 }
 
 /**
@@ -12,7 +14,9 @@ export enum RoutesEnum {
  * Description: this constant will help us to create standard routes
  */
 export const Routes: Record<RoutesEnum, string> = {
-  [RoutesEnum.OtherPage]: '/other-page',
+  [RoutesEnum.Login]: '/login',
+  [RoutesEnum.AboutUS]: '/about',
+  [RoutesEnum.SignUp]: '/signup',
   [RoutesEnum.Home]: '/',
 };
 

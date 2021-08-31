@@ -10,6 +10,8 @@ const colors = {
   normal: primitiveColors.ORANGE_100,
   normal_white: primitiveColors.WHITE_100,
   setNormal: primitiveColors.ORANGE_200,
+  footer: primitiveColors.GRAY_100,
+  text_footer: primitiveColors.GRAY_200,
 };
 
 export default colors;

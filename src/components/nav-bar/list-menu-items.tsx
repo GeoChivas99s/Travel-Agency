@@ -2,10 +2,8 @@ import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 
 import { FlexView, List } from '../../elements';
-import ListMenuItemsProps from './nav-bar.types';
 
-// eslint-disable-next-line react/prop-types
-const ListMenuItems: FC<ListMenuItemsProps> = () => {
+const ListMenuItems: FC = () => {
   return (
     <FlexView
       p="XXL"

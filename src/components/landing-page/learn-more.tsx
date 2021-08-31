@@ -1,3 +1,5 @@
+import './style.css';
+
 import React, { FC } from 'react';
 
 import { Button, FlexView, Image, Text, View } from '../../elements';
@@ -29,11 +31,14 @@ const LearnMore: FC = () => {
         </Text>
         <Button
           variant="secundary"
-          p="5px"
+          p="8px"
           display="flex"
           alignSelf={['flex-end', 'unset', 'unset']}
-          mt="10px"
+          mt="20px"
           style={{ transition: '0.3s' }}
+          className="bounce"
+          textAlign="center"
+          zIndex={1}
         >
           <Text>Learn more</Text>
         </Button>

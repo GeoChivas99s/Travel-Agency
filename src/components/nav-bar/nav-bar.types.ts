@@ -1,3 +1,4 @@
-export default interface ListMenuItemsProps {
-  Mobile?: boolean;
+interface NavbarItemsProps {
+  isScroll: boolean;
 }
+export default NavbarItemsProps;

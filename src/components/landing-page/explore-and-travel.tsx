@@ -1,3 +1,5 @@
+import './style.css';
+
 import React, { FC } from 'react';
 import { v4 } from 'uuid';
 
@@ -69,7 +71,7 @@ const ExploreTravel: FC = () => {
         </Button>
       </FlexView>
 
-      <View zIndex={-1} width={['350px', '300px', '490px']}>
+      <View zIndex={-1} width={['350px', '300px', '490px']} className="bounce">
         <Image src={`${process.env.PUBLIC_URL}walking.png`} width="100%" />
       </View>
     </FlexView>

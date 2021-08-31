@@ -1,3 +1,4 @@
+import { useTheme } from '@emotion/react';
 import React, { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -6,14 +7,18 @@ import { useEventListener } from '../../hooks';
 import MobileMenu from './mobile-menu';
 import NavBarItems from './nav-bar-items';
 const NavBar: FC = () => {
+  const theme = useTheme();
   const [colorChange, setcolorChange] = useState<string | null>('');
+  const [textChange, setTextChange] = useState<boolean>(false);
   return (
     <>
       {useEventListener('scroll', () => {
         if (window.scrollY >= 80) {
           setcolorChange('#FEC38A');
+          setTextChange(true);
         } else {
           setcolorChange('');
+          setTextChange(false);
         }
       })}
 
@@ -24,6 +29,7 @@ const NavBar: FC = () => {
         padding="6px"
         position="fixed"
         height="60px"
+        zIndex={10}
       >
         <FlexView width="50px" marginLeft="20px">
           <Link
@@ -33,7 +39,7 @@ const NavBar: FC = () => {
             <Image src={`${process.env.PUBLIC_URL}logo.png`} width="100%" />
           </Link>
         </FlexView>
-        <NavBarItems />
+        <NavBarItems isScroll={textChange} />
         <MobileMenu />
       </FlexView>
     </>
