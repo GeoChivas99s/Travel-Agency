@@ -2,12 +2,14 @@ import React, { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { FlexView, Image } from '../../elements';
-import { useEventListener } from '../../hooks';
+import { useEventListener, useUser } from '../../hooks';
 import MobileMenu from './mobile-menu';
 import NavBarItems from './nav-bar-items';
+
 const NavBar: FC = () => {
   const [colorChange, setcolorChange] = useState<string | null>('');
   const [textChange, setTextChange] = useState<boolean>(false);
+  const { userData } = useUser();
   return (
     <>
       {useEventListener('scroll', () => {
@@ -39,6 +41,7 @@ const NavBar: FC = () => {
         </FlexView>
         <NavBarItems isScroll={textChange} />
         <MobileMenu />
+        {userData?.email}
       </FlexView>
     </>
   );
