@@ -11,7 +11,6 @@ const Hero: FC = () => {
         height="65vh"
       ></View>
       <Text display="flex" color="normal" fontSize="XXL" m="50px">
-        {' '}
         | Sobre Nós
       </Text>
     </>

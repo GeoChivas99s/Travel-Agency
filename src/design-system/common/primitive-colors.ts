@@ -12,6 +12,7 @@ const primitiveColors = {
   ORANGE_200: '#FEC38A',
   GRAY_100: '#F9F9FB',
   GRAY_200: '#848484',
+  BLACK_100: '#000000',
 };
 
 export default primitiveColors;

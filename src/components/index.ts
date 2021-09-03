@@ -1,5 +1,6 @@
 export { default as Hero } from './about-us/Hero';
 export { default as Carrousel } from './carrousel';
+export { default as CarrouselShow } from './carrousel-show';
 export { default as Footer } from './footer';
 export { default as ImageCard } from './image-card';
 export { default as TravelExplore } from './landing-page/explore-and-travel';

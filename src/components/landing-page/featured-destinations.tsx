@@ -7,22 +7,22 @@ const data = [
   {
     title: 'Cacuaco',
     country: 'Angola',
-    image: process.env.PUBLIC_URL + 'asta.jpg',
+    image: process.env.PUBLIC_URL + '1.png',
   },
   {
     title: 'Viana',
     country: 'Angola',
-    image: process.env.PUBLIC_URL + 'asta.jpg',
+    image: process.env.PUBLIC_URL + '2.png',
   },
   {
     title: 'Cazenga',
     country: 'Angola',
-    image: process.env.PUBLIC_URL + 'asta.jpg',
+    image: process.env.PUBLIC_URL + '3.png',
   },
   {
     title: 'Sambinzanga',
     country: 'Angola',
-    image: process.env.PUBLIC_URL + 'asta.jpg',
+    image: process.env.PUBLIC_URL + '4.png',
   },
 ];
 const FeaturedDestinations: FC = () => {
@@ -38,6 +38,7 @@ const FeaturedDestinations: FC = () => {
         justifyContent="space-between"
         flexDirection={['column', 'column', 'row']}
         width="90%"
+        alignItems="center"
       >
         {data.map((item) => {
           return (

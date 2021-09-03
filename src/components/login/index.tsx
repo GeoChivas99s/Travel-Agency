@@ -18,7 +18,6 @@ const LoginBody: FC = () => {
   };
   const handleSubmit = () => {
     const enter: boolean = SignIn(email, password);
-
     if (enter) {
       push('/home');
     } else {

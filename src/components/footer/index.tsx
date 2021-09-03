@@ -11,7 +11,7 @@ const Footer: FC = () => {
       padding="25px"
       flexDirection="row"
       justifyContent={['space-between', 'space-between', 'space-around']}
-      fontSize={['0.7rem', '1rem', 'L']}
+      fontSize={['0.7rem', '1rem', '1rem']}
       overflowX="hidden"
     >
       <View width="150px">

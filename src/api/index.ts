@@ -17,7 +17,15 @@ export const SignIn: SignInProps = (email, password): boolean => {
 };
 
 export const SignOut = (): void => {
-  firebase.auth().signOut();
+  firebase
+    .auth()
+    .signOut()
+    .then(() => {
+      alert('sessão terminada');
+    })
+    .catch((error) => {
+      alert(error);
+    });
 };
 
 export const SignUpFirebase: SignUpProps = (email, password, number): void => {
@@ -26,7 +34,7 @@ export const SignUpFirebase: SignUpProps = (email, password, number): void => {
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .then(() => {
-        alert(`${email} cadastrado com sucesso`);
+        alert(`${email + number} cadastrado com sucesso`);
       })
       .catch((e) => {
         alert(e);

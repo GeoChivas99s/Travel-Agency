@@ -1,19 +1,28 @@
 /* eslint-disable react/prop-types */
 import React, { FC } from 'react';
 
-import { FlexView, Image, Text, View } from '../../elements';
+import { Text, View } from '../../elements';
+import Card from './card.styles';
 import ImageCardProps from './image-card.types';
 
 const ImageCard: FC<ImageCardProps> = ({ title, country, image }) => {
   return (
-    <FlexView m="10px" flexDirection="column" borderRadius="5px" zIndex={-1}>
-      <Image src={image} width="100%" height="100%" borderRadius="5px" />
-
-      <View height="50px" position="relative">
-        <Text>{title}</Text>
-        <Text>{country}</Text>
+    <Card image={image}>
+      <View height="50px">
+        <Text
+          width="45%"
+          height="3rem"
+          backgroundColor="#eaf3f2"
+          color="normal"
+          textAlign="center"
+          borderBottomRightRadius="5px"
+          p="3px"
+        >
+          {title} {''}
+          {country}
+        </Text>
       </View>
-    </FlexView>
+    </Card>
   );
 };
 export default ImageCard;

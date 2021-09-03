@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 
 import {
+  CarrouselShow,
   FeaturedDestinations,
   Footer,
   Guides,
@@ -17,6 +18,7 @@ const Home: FC = () => (
     <LearnMore />
     <FeaturedDestinations />
     <Guides />
+    <CarrouselShow />
     <Footer />
   </Layout>
 );

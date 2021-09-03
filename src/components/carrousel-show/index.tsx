@@ -7,10 +7,10 @@ import { carrouselImages } from './carrousel-show-images';
 const CarrouselShow: FC = () => {
   return (
     <Carrousel>
-      <CarrouselShowBody tittle="sss" image={carrouselImages[1]} />
-      <CarrouselShowBody tittle="sss" image={carrouselImages[1]} />
-      <CarrouselShowBody tittle="sss" image={carrouselImages[1]} />
-      <CarrouselShowBody tittle="sss" image={carrouselImages[1]} />
+      <CarrouselShowBody tittle="Moscana" image={carrouselImages.i1} />
+      <CarrouselShowBody tittle="Grécia" image={carrouselImages.i2} />
+      <CarrouselShowBody tittle="Morro do Moco" image={carrouselImages.i3} />
+      <CarrouselShowBody tittle="Ilha do Mussulo" image={carrouselImages.i4} />
     </Carrousel>
   );
 };

@@ -11,20 +11,24 @@ export const UserProvider: FC = ({ children }) => {
   const [userData, setUserData] = useState<IUser | null>(null);
   const [Logged, setLogged] = useState<boolean | null | undefined>();
   const [isLoading, setIsLoading] = useState<boolean>(false);
-
+  /*
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user: any) => {
       setUserData(user);
-      console.log(`${userData?.email}sapo`);
+      console.log(`${userData?.email}sapo1`);
       setLogged(true);
     });
-  }, []);
+  }, []);*/
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user: any) => {
-      setUserData(user);
-      console.log(`${userData?.email}sapo`);
-      setLogged(true);
+      if (user) {
+        setUserData(user);
+        setLogged(true);
+        console.log(`${user?.email}sapo`);
+      } else {
+        console.log(`${user?.email}sapo`);
+      }
     });
   }, [userData]);
 

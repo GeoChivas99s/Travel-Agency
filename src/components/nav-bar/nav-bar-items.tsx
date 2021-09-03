@@ -12,8 +12,8 @@ import NavBarItem from './nav-bar-item';
 const NavBarItems: FC<NavbarItemsProps> = ({ isScroll }) => {
   const { Logged, setLogged } = useUser();
   const handleLogout = () => {
-    SignOut;
     setLogged(false);
+    SignOut();
   };
   return (
     <List
@@ -25,22 +25,22 @@ const NavBarItems: FC<NavbarItemsProps> = ({ isScroll }) => {
     >
       <NavBarItem>
         <Link to="/">
-          <Text color={isScroll ? 'foreground' : ''}> Home </Text>
+          <Text color={isScroll ? 'text_black' : ''}> Home </Text>
         </Link>
       </NavBarItem>
       <NavBarItem>
         <Link to="/">
-          <Text color={isScroll ? 'foreground' : ''}> Destinos </Text>
+          <Text color={isScroll ? 'text_black' : ''}> Destinos </Text>
         </Link>
       </NavBarItem>
       <NavBarItem>
         <Link to={Routes[RoutesEnum.AboutUS]}>
-          <Text color={isScroll ? 'foreground' : ''}> Sobre Nós </Text>
+          <Text color={isScroll ? 'text_black' : ''}> Sobre Nós </Text>
         </Link>
       </NavBarItem>
       <NavBarItem>
         <Link to="/">
-          <Text color={isScroll ? 'foreground' : ''}> Parceiros </Text>
+          <Text color={isScroll ? 'text_black' : ''}> Parceiros </Text>
         </Link>
       </NavBarItem>
       {Logged ? (

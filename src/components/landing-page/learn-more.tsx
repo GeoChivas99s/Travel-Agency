@@ -36,7 +36,6 @@ const LearnMore: FC = () => {
           alignSelf={['flex-end', 'unset', 'unset']}
           mt="20px"
           style={{ transition: '0.3s' }}
-          className="bounce"
           textAlign="center"
           zIndex={1}
         >
