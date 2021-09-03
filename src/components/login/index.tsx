@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { FC, FormEvent, useState } from 'react';
 import { Link, Redirect, useHistory } from 'react-router-dom';
 
