@@ -22,9 +22,9 @@ const CarrouselShowBody: FC<CarrouselShowBodyProps> = ({ tittle, image }) => {
     >
       <Text
         color="foreground"
-        fontSize={['1.3rem']}
-        backgroundColor="normal"
-        borderRadius="5px"
+        fontSize={['1.2rem']}
+        backgroundColor="#1ABE84"
+        borderRadius="10px"
         textAlign="center"
         width={['100px', '200px', '250px']}
         position="absolute"

@@ -10,15 +10,22 @@ const ImageCard: FC<ImageCardProps> = ({ title, country, image }) => {
     <Card image={image}>
       <View height="50px">
         <Text
+          fontSize={['1.1rem']}
           width="45%"
           height="3rem"
-          backgroundColor="#eaf3f2"
-          color="normal"
+          backgroundColor="#1ABE84"
+          color="foreground"
           textAlign="center"
           borderBottomRightRadius="5px"
           p="3px"
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexDirection: 'column',
+          }}
         >
-          {title} {''}
+          <Text>{title}</Text>
           {country}
         </Text>
       </View>
