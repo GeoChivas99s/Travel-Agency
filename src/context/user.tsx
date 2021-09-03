@@ -9,15 +9,25 @@ const userContext = createContext({} as IUserContext);
 export const UserProvider: FC = ({ children }) => {
   const { Provider } = userContext;
   const [userData, setUserData] = useState<IUser | null>(null);
-  const [Logged, setLogged] = useState<unknown>();
+  const [Logged, setLogged] = useState<boolean | null | undefined>();
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user: any) => {
       setUserData(user);
-      console.log(`${userData?.email}`);
+      console.log(`${userData?.email}sapo`);
+      setLogged(true);
     });
   }, []);
+
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((user: any) => {
+      setUserData(user);
+      console.log(`${userData?.email}sapo`);
+      setLogged(true);
+    });
+  }, [userData]);
+
   const USER_INITIAL_VALUE: IUserContext = {
     userData,
     setUserData,

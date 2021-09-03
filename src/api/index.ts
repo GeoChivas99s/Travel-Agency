@@ -1,23 +1,19 @@
-import { useHistory } from 'react-router';
-
-import { useUser } from '../hooks';
 import { SignInProps, SignUpProps } from './api.types';
 import firebase from './config';
 
-export const SignIn: SignInProps = (email, password): void => {
-  const { setUserData } = useUser();
-  const { push } = useHistory();
+export const SignIn: SignInProps = (email, password): boolean => {
   firebase
     .auth()
     .signInWithEmailAndPassword(email, password)
     .then(() => {
-      alert('Bem-Vindo');
-      setUserData({ email: email, password: password });
-      push('/home');
+      console.log('Bem-Vindo');
+      return true;
     })
     .catch((e) => {
       alert(e);
+      return false;
     });
+  return false;
 };
 
 export const SignOut = (): void => {

@@ -9,7 +9,7 @@ import NavBarItems from './nav-bar-items';
 const NavBar: FC = () => {
   const [colorChange, setcolorChange] = useState<string | null>('');
   const [textChange, setTextChange] = useState<boolean>(false);
-  const { userData } = useUser();
+  const { userData, Logged } = useUser();
   return (
     <>
       {useEventListener('scroll', () => {
@@ -41,7 +41,7 @@ const NavBar: FC = () => {
         </FlexView>
         <NavBarItems isScroll={textChange} />
         <MobileMenu />
-        {userData?.email}
+        {Logged ? userData?.email : ''}
       </FlexView>
     </>
   );

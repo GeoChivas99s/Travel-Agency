@@ -10,8 +10,11 @@ import NavbarItemsProps from './nav-bar.types';
 import NavBarItem from './nav-bar-item';
 
 const NavBarItems: FC<NavbarItemsProps> = ({ isScroll }) => {
-  const { Logged } = useUser();
-
+  const { Logged, setLogged } = useUser();
+  const handleLogout = () => {
+    SignOut;
+    setLogged(false);
+  };
   return (
     <List
       px="1rem"
@@ -42,7 +45,7 @@ const NavBarItems: FC<NavbarItemsProps> = ({ isScroll }) => {
       </NavBarItem>
       {Logged ? (
         <NavBarItem>
-          <Button variant="primary" onClick={SignOut}>
+          <Button variant="primary" onClick={handleLogout}>
             Sair
           </Button>
         </NavBarItem>

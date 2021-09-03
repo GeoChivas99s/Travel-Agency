@@ -1,4 +1,4 @@
-export type SignInProps = (email: string, password: string) => void;
+export type SignInProps = (email: string, password: string) => boolean;
 
 export type SignUpProps = (
   email: string,
