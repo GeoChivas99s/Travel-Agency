@@ -1,20 +1,18 @@
 /* eslint-disable react/prop-types */
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { SignOut } from '../../api';
 import { Routes, RoutesEnum } from '../../constants/routes';
 import { Button, List, Text } from '../../elements';
 import { useUser } from '../../hooks/index';
+import DropdownMenu from './dropdown-menu';
 import NavbarItemsProps from './nav-bar.types';
 import NavBarItem from './nav-bar-item';
 
 const NavBarItems: FC<NavbarItemsProps> = ({ isScroll }) => {
-  const { Logged, setLogged } = useUser();
-  const handleLogout = () => {
-    setLogged(false);
-    SignOut();
-  };
+  const [openMenu, setOpenMenu] = useState(false);
+  const { Logged } = useUser();
+
   return (
     <List
       px="1rem"
@@ -39,16 +37,32 @@ const NavBarItems: FC<NavbarItemsProps> = ({ isScroll }) => {
         </Link>
       </NavBarItem>
       <NavBarItem>
-        <Link to="/">
-          <Text color={isScroll ? 'text_black' : ''}> Parceiros </Text>
-        </Link>
+        <Text color={isScroll ? 'text_black' : ''}> Parceiros</Text>
       </NavBarItem>
-      {Logged ? (
+      {Logged && (
         <NavBarItem>
-          <Button variant="primary" onClick={handleLogout}>
-            Sair
-          </Button>
+          <Text
+            onClick={() => setOpenMenu(!openMenu)}
+            border="solid"
+            style={{
+              backgroundImage: `url(${process.env.PUBLIC_URL}asta.jpg)`,
+              backgroundSize: 'cover',
+              width: '40px',
+              height: '40px',
+              borderRadius: '20px',
+            }}
+          ></Text>
         </NavBarItem>
+      )}
+
+      {openMenu && (
+        <NavBarItem>
+          <DropdownMenu />
+        </NavBarItem>
+      )}
+
+      {Logged ? (
+        <> </>
       ) : (
         <>
           <NavBarItem>

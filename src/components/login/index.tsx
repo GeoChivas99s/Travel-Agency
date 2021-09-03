@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { FC, FormEvent, useState } from 'react';
-import { Link, Redirect, useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import { SignIn } from '../../api';
 import { Routes, RoutesEnum } from '../../constants/routes';
@@ -11,6 +11,7 @@ const LoginBody: FC = () => {
   const [password, setPassword] = useState('');
   const { Logged } = useUser();
   const { push } = useHistory();
+
   const handleEmail = (event: FormEvent<HTMLInputElement>) => {
     setEmail(event.currentTarget.value);
   };
@@ -21,15 +22,13 @@ const LoginBody: FC = () => {
     const enter: boolean = SignIn(email, password);
     if (enter) {
       push('/home');
-    } else {
-      alert('Vc');
     }
   };
 
   return (
     <>
       {Logged ? (
-        <Redirect to="/home" />
+        push('/')
       ) : (
         <FlexView
           background="#FAC38A"

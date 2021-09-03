@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { FC, FormEvent, useState } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import { SignUpFirebase } from '../../api/index';
 import { Routes, RoutesEnum } from '../../constants/routes';
@@ -8,10 +8,11 @@ import { Button, FlexView, Form, Image, Input, Text } from '../../elements';
 import { useUser } from '../../hooks';
 
 const SignUp: FC = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [number] = useState<number>(0);
   const { Logged } = useUser();
+  const { push } = useHistory();
   const handleEmail = (event: FormEvent<HTMLInputElement>) => {
     setEmail(event.currentTarget.value);
     console.log(event.currentTarget.value);
@@ -27,7 +28,7 @@ const SignUp: FC = () => {
   return (
     <>
       {Logged ? (
-        <Redirect to="/home" />
+        push('/')
       ) : (
         <FlexView
           background="#FAC38A"
