@@ -8,7 +8,7 @@ import DestinationsGaleryData from './destinations-galery-data';
 const DestinationsGalery: FC = () => {
   return (
     <ListImage
-      flexDirection={['column', 'column', 'row']}
+      flexDirection={['row']}
       width="95vw"
       m="0 auto"
       height="100vh"
@@ -16,11 +16,12 @@ const DestinationsGalery: FC = () => {
     >
       {DestinationsGaleryData.map((item) => {
         return (
-          <View
+          <FlexView
             backgroundImage={`url(${item.image})`}
             key={v4()}
             backgroundSize="cover"
             className={item.id}
+            flexBasis={['100%', '', '']}
           />
         );
       })}
@@ -33,6 +34,7 @@ export default DestinationsGalery;
 const ListImage = styled(FlexView)<any>`
   display: flex;
   flex-wrap: wrap;
+
   .large {
     flex-basis: 60%;
   }

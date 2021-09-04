@@ -2,14 +2,14 @@ import { css } from '@emotion/react';
 
 const GlobalStyles = css`
   @font-face {
-    font-family: Raleway;
-    src: url('../../public/Raleway-VariableFont_wght.ttf');
+    font-family: Nunito;
+    src: url(${process.env.PUBLIC_URL + 'Nunito-Light.ttf'});
   }
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Raleway;
+    font-family: Nunito;
   }
 
   body {
