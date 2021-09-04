@@ -30,6 +30,7 @@ const NavBar: FC = (props) => {
         position="fixed"
         height="60px"
         zIndex={10}
+        style={{ transition: '.9s' }}
         {...props}
       >
         <FlexView width="50px" marginLeft="20px">

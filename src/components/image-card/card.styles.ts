@@ -6,7 +6,7 @@ import { FlexView } from '../../elements';
 const Card = styled(FlexView)<any>`
   cursor: pointer;
   display: flex;
-  transition: transform 0.2s;
+  transition: transform 0.5s;
   margin: 10px;
   flex-direction: column;
   border-radius: 5px;
