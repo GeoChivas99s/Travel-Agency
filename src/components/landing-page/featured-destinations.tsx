@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
+import { Link } from 'react-router-dom';
 import { v4 } from 'uuid';
 
+import { Routes, RoutesEnum } from '../../constants/routes';
 import { FlexView, Text } from '../../elements';
 import ImageCard from '../image-card';
 import { data } from './destinations-data';
@@ -11,7 +13,7 @@ const FeaturedDestinations: FC = () => {
       <FlexView justifyContent="space-between" width="85%" mb="20px">
         <Text fontSize="XXL">Featured destinations</Text>
         <Text color="normal" style={{ cursor: 'pointer' }}>
-          View all »»
+          <Link to={Routes[RoutesEnum.Destinations]}>View all »»</Link>
         </Text>
       </FlexView>
       <FlexView

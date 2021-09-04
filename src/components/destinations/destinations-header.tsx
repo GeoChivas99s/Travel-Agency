@@ -5,7 +5,7 @@ import { Text, View } from '../../elements';
 const DestinationsHero: FC = () => {
   return (
     <View
-      backgroundColor="accent_green"
+      backgroundColor="footer"
       width="100vw"
       height="30vh"
       color="foreground"
@@ -15,6 +15,7 @@ const DestinationsHero: FC = () => {
         mt={['100px', '120px', '130px']}
         ml="40px"
         position="absolute"
+        color="accent_green"
       >
         Destinations
       </Text>

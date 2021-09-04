@@ -6,7 +6,7 @@ import { useEventListener, useUser } from '../../hooks';
 import MobileMenu from './mobile-menu';
 import NavBarItems from './nav-bar-items';
 
-const NavBar: FC = () => {
+const NavBar: FC = (props) => {
   const [colorChange, setcolorChange] = useState<string | null>('');
   const [textChange, setTextChange] = useState<boolean>(false);
   const { userData, Logged } = useUser();
@@ -30,6 +30,7 @@ const NavBar: FC = () => {
         position="fixed"
         height="60px"
         zIndex={10}
+        {...props}
       >
         <FlexView width="50px" marginLeft="20px">
           <Link
