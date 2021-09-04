@@ -7,6 +7,7 @@ export enum RoutesEnum {
   Login = 'login',
   AboutUS = 'about',
   SignUp = 'signup',
+  Destinations = 'destinations',
 }
 
 /**
@@ -17,6 +18,7 @@ export const Routes: Record<RoutesEnum, string> = {
   [RoutesEnum.Login]: '/login',
   [RoutesEnum.AboutUS]: '/about',
   [RoutesEnum.SignUp]: '/signup',
+  [RoutesEnum.Destinations]: '/destinations',
   [RoutesEnum.Home]: '/',
 };
 

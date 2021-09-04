@@ -14,7 +14,7 @@ const NavBar: FC = () => {
     <>
       {useEventListener('scroll', () => {
         if (window.scrollY >= 80) {
-          setcolorChange('#F9FFFE');
+          setcolorChange('#1ABE84');
           setTextChange(true);
         } else {
           setcolorChange('');

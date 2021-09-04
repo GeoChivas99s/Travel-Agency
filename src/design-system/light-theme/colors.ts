@@ -13,6 +13,7 @@ const colors = {
   footer: primitiveColors.GRAY_100,
   text_footer: primitiveColors.GRAY_200,
   text_black: primitiveColors.BLACK_100,
+  accent_green: primitiveColors.GREEN_200,
 };
 
 export default colors;

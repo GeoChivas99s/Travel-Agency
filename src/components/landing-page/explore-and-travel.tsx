@@ -15,11 +15,12 @@ const ExploreTravel: FC = () => {
       pt="90px"
     >
       <FlexView
+        mt="20px"
         flexDirection="column"
         justifyContent="space-between"
         p="0px 30px 30px 30px "
         width={['100%', '90%', '30%']}
-        height="40vh"
+        height="55vh"
         alignSelf="start"
       >
         <Text fontSize={['XXL', 'XXL', 'XXXL']}>
@@ -66,7 +67,7 @@ const ExploreTravel: FC = () => {
             })}
           </Select>
         </FlexView>
-        <Button variant="secundary" mt="10px">
+        <Button variant="secundary" mt="5px" width="45%" p="10px">
           <Text>Explore</Text>
         </Button>
       </FlexView>

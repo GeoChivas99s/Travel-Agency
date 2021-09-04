@@ -1,18 +1,16 @@
 import React, { FC } from 'react';
 
-import { Text, View } from '../../elements';
+import { View } from '../../elements';
 
-const Hero: FC = () => {
+const Hero: FC = (props) => {
   return (
     <>
       <View
         background={`url('${process.env.PUBLIC_URL}about.jpg')  center center`}
         width="100vw"
-        height="65vh"
+        height="67vh"
+        {...props}
       ></View>
-      <Text display="flex" color="normal" fontSize="XXL" m="50px">
-        | Sobre Nós
-      </Text>
     </>
   );
 };

@@ -1,11 +1,19 @@
 /* eslint-disable react/prop-types */
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
+import * as Icon from 'react-icons/ai';
 
 import { Text, View } from '../../elements';
 import Card from './card.styles';
 import ImageCardProps from './image-card.types';
 
 const ImageCard: FC<ImageCardProps> = ({ title, country, image }) => {
+  const [favorite, setFavorite] = useState<boolean>(false);
+  const handleFavorite = () => {
+    setFavorite(!favorite);
+    favorite
+      ? alert('removido dos favoritos')
+      : alert('adicionado aos favoritos');
+  };
   return (
     <Card image={image}>
       <View height="50px">
@@ -29,6 +37,11 @@ const ImageCard: FC<ImageCardProps> = ({ title, country, image }) => {
           {country}
         </Text>
       </View>
+      {favorite ? (
+        <Icon.AiFillHeart className="icon" onClick={handleFavorite} />
+      ) : (
+        <Icon.AiOutlineHeart className="icon" onClick={handleFavorite} />
+      )}
     </Card>
   );
 };

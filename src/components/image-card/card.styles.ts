@@ -19,6 +19,17 @@ const Card = styled(FlexView)<any>`
   height: 20rem;
   :hover {
     transform: scale(1.3);
+    .icon {
+      display: flex;
+      color: #fb8f1d;
+    }
+  }
+
+  .icon {
+    display: none;
+    font-size: 3rem;
+    align-self: center;
+    flex: 1;
   }
 `;
 

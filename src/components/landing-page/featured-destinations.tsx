@@ -3,28 +3,8 @@ import { v4 } from 'uuid';
 
 import { FlexView, Text } from '../../elements';
 import ImageCard from '../image-card';
-const data = [
-  {
-    title: 'Cacuaco',
-    country: 'Angola',
-    image: process.env.PUBLIC_URL + '1.png',
-  },
-  {
-    title: 'Viana',
-    country: 'Angola',
-    image: process.env.PUBLIC_URL + '2.png',
-  },
-  {
-    title: 'Cazenga',
-    country: 'Angola',
-    image: process.env.PUBLIC_URL + '3.png',
-  },
-  {
-    title: 'Sambinzanga',
-    country: 'Angola',
-    image: process.env.PUBLIC_URL + '4.png',
-  },
-];
+import { data } from './destinations-data';
+
 const FeaturedDestinations: FC = () => {
   return (
     <FlexView alignItems="center" mt="20px" width="100%" flexDirection="column">

@@ -23,21 +23,21 @@ const NavBarItems: FC<NavbarItemsProps> = ({ isScroll }) => {
     >
       <NavBarItem>
         <Link to="/">
-          <Text color={isScroll ? 'text_black' : ''}> Home </Text>
+          <Text color={isScroll ? 'foreground' : ''}> Home </Text>
         </Link>
       </NavBarItem>
       <NavBarItem>
-        <Link to="/">
-          <Text color={isScroll ? 'text_black' : ''}> Destinos </Text>
+        <Link to={Routes[RoutesEnum.Destinations]}>
+          <Text color={isScroll ? 'foreground' : ''}> Destinos </Text>
         </Link>
       </NavBarItem>
       <NavBarItem>
         <Link to={Routes[RoutesEnum.AboutUS]}>
-          <Text color={isScroll ? 'text_black' : ''}> Sobre Nós </Text>
+          <Text color={isScroll ? 'foreground' : ''}> Sobre Nós </Text>
         </Link>
       </NavBarItem>
       <NavBarItem>
-        <Text color={isScroll ? 'text_black' : ''}> Parceiros</Text>
+        <Text color={isScroll ? 'foreground' : ''}> Parceiros</Text>
       </NavBarItem>
       {Logged && (
         <NavBarItem>

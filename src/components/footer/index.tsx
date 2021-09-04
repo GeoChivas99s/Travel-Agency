@@ -7,7 +7,7 @@ const Footer: FC = () => {
     <FlexView
       backgroundColor="footer"
       width="100vw"
-      height={['90vh', '60vh', '50vh']}
+      height={['40vh', '60vh', '50vh']}
       padding="25px"
       flexDirection="row"
       justifyContent={['space-between', 'space-between', 'space-around']}
