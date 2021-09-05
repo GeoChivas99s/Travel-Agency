@@ -12,6 +12,7 @@ export const UserProvider: FC = ({ children }) => {
   const [userData, setUserData] = useState<IUser | null>(null);
   const [Logged, setLogged] = useState<boolean | null | undefined>();
   const [isLoading, setIsLoading] = useState<boolean>(false);
+
   /*
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user: any) => {
