@@ -1,16 +1,17 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 
 import { SignOut } from '../../api';
-import { Button, List } from '../../elements';
+import { Button, List, Text } from '../../elements';
 import { useUser } from '../../hooks';
 import DropdownItem from './dropdown-item';
 
 const DropdownMenu: FC = () => {
   const { userData, setLogged } = useUser();
-
+  const [open, setOopen] = useState(true);
   const handleLogout = () => {
     setLogged(false);
     SignOut();
+    setOopen(!open);
   };
   return (
     <List
@@ -24,9 +25,13 @@ const DropdownMenu: FC = () => {
         padding: '1rem',
         transform: 'translateX(-100%)',
         borderRadius: '10px',
+        display: `${open ? 'block' : 'none'}`,
       }}
     >
-      <DropdownItem>{userData?.email}</DropdownItem>
+      <DropdownItem>
+        {' '}
+        <Text fontSize="1.5rem"> {userData?.email}</Text>
+      </DropdownItem>
       <DropdownItem>
         <Button
           variant="secundary"

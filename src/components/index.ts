@@ -1,4 +1,4 @@
-export { default as Hero } from './about-us/hero';
+export { default as Hero } from './about-us/hero-image';
 export { default as Carrousel } from './carrousel';
 export { default as CarrouselShow } from './carrousel-show';
 export { default as DestinationsGalery } from './destinations/destinations-galery';
