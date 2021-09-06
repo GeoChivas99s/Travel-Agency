@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import styled from '@emotion/styled';
 import React, { FC } from 'react';
 import { v4 } from 'uuid';
 
-import { FlexView, View } from '../../elements';
+import { FlexView } from '../../elements';
 import DestinationsGaleryData from './destinations-galery-data';
 
 const DestinationsGalery: FC = () => {
